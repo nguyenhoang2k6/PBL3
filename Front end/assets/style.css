@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --header-height: 112px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 2000px;
+    padding-top: var(--header-height);
+}
+
+
+#header {
+    background-color: #002366;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-areas: 
+        "logo search user_nav"
+        "logo nav nav";
+    grid-template-columns: 200px 1fr 400px;
+    grid-template-rows: 72px 40px;
+    height: var(--header-height);
+    border-bottom: #002366 solid 2px;
+
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    margin-left: 80px;
+    grid-area: logo;
+}
+
+#nav {
+    display: block;
+    display: flex;
+    justify-content:flex-start;
+    align-items: stretch;
+    gap: 60px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.25);
+    padding-left: 20px;
+    padding-top: 0;
+    height: 100%;
+    grid-area: nav;
+    list-style-type: none;
+}
+
+#nav li {
+    display: flex;
+    align-items: stretch;
+}
+
+#nav li a {
+    position: relative;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+    height: 100%;
+    padding: 0;
+}
+#nav li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;                /* nằm sát đáy header */
+  width: 0;                 /* ban đầu không thấy */
+  height: 2px;              /* độ dày gạch */
+  background-color: #FF8C00;   /* màu gạch */
+  transition: width 0.2s ease; /* hiệu ứng chạy ngang */
+}
+
+
+
+#nav li:hover a {
+  color: #FF8C00;            /* đổi màu chữ khi hover */
+}
+
+#nav li a:hover::after {
+  width: 100%;              /* khi hover thì gạch chạy ngang hết chữ */
+}
+
+#nav li#product_list a {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #bf3828;
+    padding : 0 10px;
+}
+
+#nav li#product_list a::after {
+    width: 0;
+}
+
+#nav li#product_list:hover a::after {
+    width: 0;
+}
+
+#nav li#product_list a,
+#nav li#product_list:hover a {
+    color: #ffffff;
+}
+
+#header #search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: search;
+}
+#header #search #search_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 600px;
+    height: 36px;
+}
+
+#header #search #search_box input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+#header #search button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 9px 0px 9px 5px;
+}
+
+#header #user_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+    grid-area: user_nav;
+}
+
+#header #user_nav span {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+}
+
+#user_nav #contact{
+    background-color: #e2a05f;
+    border-radius: 999px;
+    min-height: 38px;
+    padding: 5px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+#user_nav #contact .contact-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+#user_nav #contact .contact-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+#user_nav #contact .contact-label {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+#user_nav #contact .contact-number {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+}
+
+#user_nav #contact .contact-number:hover {
+    color: #ffffff;
+}
+
+#user_nav #cart, #user_nav #account, #user_nav #wishlist, #user_nav #language {
+    background-color: #7aafb3;;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.2s ease;
+}
+
+#user_nav #cart i,
+#user_nav #account i,
+#user_nav #wishlist i,
+#user_nav #language i {
+    color: #000000;
+}
+
+#user_nav #cart:hover,
+#user_nav #account:hover,
+#user_nav #wishlist:hover,
+#user_nav #language:hover {
+    filter: brightness(1.3);
+}
+
+#user_nav #cart .item-count,
+#user_nav #wishlist .item-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #bf3828;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
