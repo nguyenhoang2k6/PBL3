@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "ma_don": "DH-001",
+    "ngay_dat": "2025-03-20",
+    "trang_thai_don": "Hoàn tất",
+    "thanh_toan": "Chuyển khoản",
+    "da_thanh_toan": true,
+    "tong_tien": 848000,
+    "phi_ship": 30000,
+    "giam_gia": 50000,
+    "dia_chi_giao": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+    "ghi_chu": "Giao giờ hành chính",
+    "ngay_tao": "2025-03-20",
+    "customer_id": 1,
+    "items": [
+      {
+        "product_id": 1,
+        "so_luong": 1,
+        "gia_ban": 599000
+      },
+      {
+        "product_id": 4,
+        "so_luong": 2,
+        "gia_ban": 149000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "ma_don": "DH-002",
+    "ngay_dat": "2025-03-22",
+    "trang_thai_don": "Đang giao",
+    "thanh_toan": "COD",
+    "da_thanh_toan": false,
+    "tong_tien": 199000,
+    "phi_ship": 20000,
+    "giam_gia": 0,
+    "dia_chi_giao": "456 Đường Nguyễn Huệ, Quận 2, TP.HCM",
+    "ghi_chu": "Gọi trước khi giao",
+    "ngay_tao": "2025-03-22",
+    "customer_id": 2,
+    "items": [
+      {
+        "product_id": 2,
+        "so_luong": 1,
+        "gia_ban": 199000
+      }
+    ]
+  }
+]

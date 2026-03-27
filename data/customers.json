@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "ten_khach": "Nguyễn Văn A",
+    "sdt": "0901234567",
+    "email": "nguyenvana@email.com",
+    "kenh": "Facebook",
+    "nhan": "VIP",
+    "dia_chi": "123 Đường Lê Lợi, Quận 1, TP.HCM",
+    "ghi_chu": "Khách hàng thân thiết",
+    "ngay_tao": "2025-02-10"
+  },
+  {
+    "id": 2,
+    "ten_khach": "Trần Thị B",
+    "sdt": "0987654321",
+    "email": "tranthib@email.com",
+    "kenh": "Shopee",
+    "nhan": "Mới",
+    "dia_chi": "456 Đường Nguyễn Huệ, Quận 2, TP.HCM",
+    "ghi_chu": "",
+    "ngay_tao": "2025-03-15"
+  }
+]
