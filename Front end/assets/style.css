@@ -9,15 +9,61 @@
     --header-height: 112px;
 }
 
+.text-bold {
+    font-weight: 700;
+}
+
+.text-semibold {
+    font-weight: 600;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.text-10 {
+    font-size: 10px;
+}
+
+.text-13 {
+    font-size: 13px;
+}
+
+.text-14 {
+    font-size: 14px;
+}
+
+.text-16 {
+    font-size: 16px;
+}
+
+.text-18 {
+    font-size: 18px;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-24 {
+    font-size: 24px;
+}
+
+.lh-1 {
+    line-height: 1;
+}
+
+.lh-11 {
+    line-height: 1.1;
+}
+
 html, body {
     height: 100%;
 }
 
 body {
-    min-height: 2000px;
     padding-top: var(--header-height);
 }
-
 
 #header {
     background-color: #002366;
@@ -70,7 +116,6 @@ body {
     text-decoration: none;
     align-items: center;
     color: #ffffff;
-    font-size: 20px;
     height: 100%;
     padding: 0;
 }
@@ -135,7 +180,6 @@ body {
 #header #search #search_box input {
     border: none;
     outline: none;
-    font-size: 16px;
     width: 100%;
     margin-left: 10px;
 }
@@ -144,7 +188,6 @@ body {
     background-color: transparent;
     border: none;
     color: #000000;
-    font-size: 18px;
     cursor: pointer;
     padding: 9px 0px 9px 5px;
 }
@@ -159,8 +202,6 @@ body {
 }
 
 #header #user_nav span {
-    font-size: 14px;
-    font-weight: 400;
     display: block;
 }
 
@@ -175,26 +216,16 @@ body {
 
 }
 
-#user_nav #contact .contact-icon {
-    font-size: 24px;
-    line-height: 1;
-}
-
 #user_nav #contact .contact-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
 }
 
 #user_nav #contact .contact-label {
-    font-size: 13px;
-    font-weight: 500;
     white-space: nowrap;
 }
 
 #user_nav #contact .contact-number {
-    font-size: 16px;
-    font-weight: 700;
     color: #000000;
     text-decoration: none;
 }
@@ -239,10 +270,133 @@ body {
     border-radius: 50%;
     background-color: #bf3828;
     color: #ffffff;
-    font-size: 10px;
-    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+
+}
+
+#footer {
+    background-color: #002366;
+    min-height: 200px;
+    margin-top: 12px;
+    padding-top: 30px;
+    padding-bottom: 12px;
+    display: grid;
+    grid-template-areas:
+     "a1 a2 a3 a4"
+     "divider divider divider divider"
+     "b b b b";
+    grid-template-columns: 30% 20% 25% 25%;
+    grid-template-rows: auto auto auto;
+    color: #ffffff;
+}
+
+#footer_divider {
+    grid-area: divider;
+    width: 88%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.28);
+    justify-self: center;
+    margin-top: 8px;
+}
+
+#footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #962b1f;
+}
+
+#footer p {
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+#footer li {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    list-style: none;
+}
+
+#footer li:hover {
+    color: #962b1f;
+}
+
+#footer h4 {
+    margin-bottom: 12px;
+}
+
+#footer #info {
+    grid-area: a1;
+    padding-left: 30px;
+}
+
+#footer #about {
+    grid-area: a2;
+}
+
+#footer #policies {
+    grid-area: a3;
+}
+
+#footer #social {
+    grid-area: a4;
+}
+
+#footer #social_icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#footer #social_icons .social-icon {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+    background-color: #7aafb3;
+    color: #000000;
+    text-decoration: none;
+    transition: filter 0.2s ease;
+}
+
+#footer #social_icons .social-icon:hover {
+    filter: brightness(1.3);
+}
+
+#footer #social_icons .social-icon.facebook {
+    background-color: #1877f2;
+    color: #ffffff;
+}
+
+#footer #social_icons .social-icon.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    color: #ffffff;
+}
+
+#footer #social_icons .social-icon.twitter {
+    background-color: #1da1f2;
+    color: #ffffff;
+}
+
+#footer #social_icons .social-icon.youtube {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+#footer #copyright {
+    grid-area: b;
+    text-align: center;
+    margin: 12px 0px 0px;
 }
