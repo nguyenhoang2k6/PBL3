@@ -27,10 +27,14 @@
             "unique": true
           },
           {
-            "name": "Danh mục",
-            "type": "select",
+            "name": "category_id",
+            "type": "integer",
             "required": true,
-            "options": ["Giày", "Áo", "Quần", "Phụ kiện", "Dụng cụ"]
+            "foreign_key": true,
+            "references": {
+              "table": "tbl_danh_muc",
+              "column": "ID"
+            }
           },
           {
             "name": "Thương hiệu",
@@ -95,6 +99,12 @@
           }
         ],
         "relations": [
+          {
+            "name": "Danh mục",
+            "target_table": "tbl_danh_muc",
+            "local_key": "category_id",
+            "type": "many_to_one"
+          },
           {
             "name": "Đơn hàng",
             "target_table": "tbl_don_hang",
@@ -283,6 +293,141 @@
           },
           {
             "name": "Chi tiết đơn hàng (Items)",
+            "target_table": "tbl_san_pham",
+            "type": "many_to_many",
+            "junction_logic": "Một mảng items chứa product_id tham chiếu tới tbl_san_pham.id"
+          }
+        ]
+      },
+      {
+        "id": "tbl_danh_muc",
+        "name": "Danh mục",
+        "description": "Bảng quản lý danh mục sản phẩm",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true,
+            "auto_generate": true
+          },
+          {
+            "name": "Tên danh mục",
+            "type": "text",
+            "required": true
+          },
+          {
+            "name": "Mô tả",
+            "type": "text",
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "tbl_nha_cung_cap",
+        "name": "Nhà cung cấp",
+        "description": "Bảng quản lý nhà cung cấp",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true,
+            "auto_generate": true
+          },
+          {
+            "name": "Tên nhà cung cấp",
+            "type": "text",
+            "required": true
+          },
+          {
+            "name": "SĐT",
+            "type": "phone",
+            "required": true
+          },
+          {
+            "name": "Email",
+            "type": "email",
+            "required": false
+          },
+          {
+            "name": "Địa chỉ",
+            "type": "text",
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "tbl_phieu_nhap",
+        "name": "Phiếu nhập",
+        "description": "Bảng quản lý phiếu nhập kho",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true,
+            "auto_generate": true
+          },
+          {
+            "name": "Mã phiếu",
+            "type": "text",
+            "required": true,
+            "unique": true,
+            "auto_generate": true,
+            "format": "PN-YYYYMMDD-XXXX"
+          },
+          {
+            "name": "Ngày nhập",
+            "type": "date",
+            "required": true,
+            "default": "now()"
+          },
+          {
+            "name": "supplier_id",
+            "type": "integer",
+            "required": true,
+            "foreign_key": true,
+            "references": {
+              "table": "tbl_nha_cung_cap",
+              "column": "ID"
+            }
+          },
+          {
+            "name": "user_id",
+            "type": "integer",
+            "required": true,
+            "foreign_key": true,
+            "references": {
+              "table": "tbl_nguoi_dung",
+              "column": "ID"
+            }
+          },
+          {
+            "name": "Tổng tiền",
+            "type": "number",
+            "format": "currency_vnd",
+            "required": true,
+            "min": 0
+          },
+          {
+            "name": "Ghi chú",
+            "type": "text",
+            "required": false
+          }
+        ],
+        "relations": [
+          {
+            "name": "Nhà cung cấp",
+            "target_table": "tbl_nha_cung_cap",
+            "local_key": "supplier_id",
+            "type": "many_to_one"
+          },
+          {
+            "name": "Người nhập",
+            "target_table": "tbl_nguoi_dung",
+            "local_key": "user_id",
+            "type": "many_to_one"
+          },
+          {
+            "name": "Chi tiết phiếu nhập (Items)",
             "target_table": "tbl_san_pham",
             "type": "many_to_many",
             "junction_logic": "Một mảng items chứa product_id tham chiếu tới tbl_san_pham.id"
