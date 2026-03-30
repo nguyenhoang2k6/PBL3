@@ -77,7 +77,12 @@
             "type": "select",
             "required": true,
             "default": "Nháp",
-            "options": ["Nháp", "Đang bán", "Sắp về", "Ngừng bán"]
+            "options": [
+              "Nháp",
+              "Đang bán",
+              "Sắp về",
+              "Ngừng bán"
+            ]
           },
           {
             "name": "Link sản phẩm",
@@ -143,13 +148,23 @@
             "name": "Kênh",
             "type": "select",
             "required": false,
-            "options": ["Facebook", "Shopee", "Website", "Zalo", "Khác"]
+            "options": [
+              "Facebook",
+              "Shopee",
+              "Website",
+              "Zalo",
+              "Khác"
+            ]
           },
           {
             "name": "Nhãn",
             "type": "multi_select",
             "required": false,
-            "options": ["VIP", "Mới", "Quay lại"]
+            "options": [
+              "VIP",
+              "Mới",
+              "Quay lại"
+            ]
           },
           {
             "name": "Địa chỉ",
@@ -233,7 +248,11 @@
             "name": "Thanh toán",
             "type": "select",
             "required": true,
-            "options": ["COD", "Chuyển khoản", "Ví điện tử"]
+            "options": [
+              "COD",
+              "Chuyển khoản",
+              "Ví điện tử"
+            ]
           },
           {
             "name": "Đã thanh toán",
@@ -435,6 +454,89 @@
         ]
       },
       {
+        "id": "tbl_hoa_don",
+        "name": "Hóa đơn",
+        "description": "Bảng quản lý hóa đơn (chứng từ kế toán, VAT)",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true,
+            "auto_generate": true
+          },
+          {
+            "name": "Mã hóa đơn",
+            "type": "text",
+            "required": true,
+            "unique": true,
+            "format": "HD-YYYYMMDD-XXXX"
+          },
+          {
+            "name": "order_id",
+            "type": "integer",
+            "required": true,
+            "foreign_key": true,
+            "references": {
+              "table": "tbl_don_hang",
+              "column": "ID"
+            }
+          },
+          {
+            "name": "user_id",
+            "type": "integer",
+            "required": true,
+            "foreign_key": true,
+            "references": {
+              "table": "tbl_nguoi_dung",
+              "column": "ID"
+            }
+          },
+          {
+            "name": "Ngày xuất",
+            "type": "datetime",
+            "required": true,
+            "default": "now()"
+          },
+          {
+            "name": "Tổng tiền trước thuế",
+            "type": "number",
+            "format": "currency_vnd",
+            "required": true
+          },
+          {
+            "name": "Thuế VAT",
+            "type": "number",
+            "format": "currency_vnd",
+            "required": true
+          },
+          {
+            "name": "Tổng thanh toán",
+            "type": "number",
+            "format": "currency_vnd",
+            "required": true
+          },
+          {
+            "name": "Mã số thuế",
+            "type": "text",
+            "required": false
+          }
+        ],
+        "relations": [
+          {
+            "name": "Đơn hàng",
+            "target_table": "tbl_don_hang",
+            "local_key": "order_id",
+            "type": "one_to_one"
+          },
+          {
+            "name": "Người lập",
+            "target_table": "tbl_nguoi_dung",
+            "local_key": "user_id",
+            "type": "many_to_one"
+          }
+        ]
+      },
+      {
         "id": "tbl_nguoi_dung",
         "name": "Người dùng",
         "description": "Bảng quản lý tài khoản truy cập hệ thống",
@@ -460,7 +562,11 @@
             "name": "Role",
             "type": "select",
             "required": true,
-            "options": ["Quản trị viên", "Nhân viên", "Khách hàng"]
+            "options": [
+              "Quản trị viên",
+              "Nhân viên",
+              "Khách hàng"
+            ]
           },
           {
             "name": "Họ tên",
@@ -478,6 +584,158 @@
             "required": true,
             "auto_generate": true,
             "default": "now()"
+          }
+        ]
+      },
+      {
+        "id": "tbl_thuong_hieu",
+        "name": "Thương hiệu",
+        "description": "Quản lý hãng sản xuất",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true
+          },
+          {
+            "name": "Tên",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "tbl_kich_thuoc",
+        "name": "Kích thước",
+        "description": "Danh mục Size",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true
+          },
+          {
+            "name": "Tên",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "tbl_mau_sac",
+        "name": "Màu sắc",
+        "description": "Danh mục Màu",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true
+          },
+          {
+            "name": "Tên",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "tbl_bien_the_sp",
+        "name": "Biến thể sản phẩm",
+        "description": "Quản lý biến thể (Size/Màu) và Tồn kho",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "uuid",
+            "primary_key": true
+          },
+          {
+            "name": "product_id",
+            "type": "uuid"
+          },
+          {
+            "name": "Tồn kho",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "id": "tbl_anh_sp",
+        "name": "Ảnh sản phẩm",
+        "description": "Quản lý link ảnh",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true
+          },
+          {
+            "name": "product_id",
+            "type": "uuid"
+          }
+        ]
+      },
+      {
+        "id": "tbl_so_dia_chi",
+        "name": "Sổ địa chỉ",
+        "description": "Địa chỉ giao hàng của khách",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "uuid",
+            "primary_key": true
+          },
+          {
+            "name": "customer_id",
+            "type": "uuid"
+          }
+        ]
+      },
+      {
+        "id": "tbl_gio_hang",
+        "name": "Giỏ hàng",
+        "description": "Giỏ hàng đang chọn",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "uuid",
+            "primary_key": true
+          },
+          {
+            "name": "customer_id",
+            "type": "uuid"
+          }
+        ]
+      },
+      {
+        "id": "tbl_danh_gia",
+        "name": "Đánh giá",
+        "description": "Đánh giá sản phẩm",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "uuid",
+            "primary_key": true
+          },
+          {
+            "name": "product_id",
+            "type": "uuid"
+          },
+          {
+            "name": "Rating",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "id": "tbl_thanh_toan",
+        "name": "Thanh toán",
+        "description": "Lịch sử thanh toán",
+        "columns": [
+          {
+            "name": "ID",
+            "type": "integer",
+            "primary_key": true
+          },
+          {
+            "name": "order_id",
+            "type": "uuid"
           }
         ]
       }

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "39",
+    "type": "Shoes"
+  },
+  {
+    "id": 2,
+    "name": "40",
+    "type": "Shoes"
+  },
+  {
+    "id": 3,
+    "name": "41",
+    "type": "Shoes"
+  },
+  {
+    "id": 4,
+    "name": "S",
+    "type": "Clothes"
+  },
+  {
+    "id": 5,
+    "name": "M",
+    "type": "Clothes"
+  },
+  {
+    "id": 6,
+    "name": "L",
+    "type": "Clothes"
+  }
+]

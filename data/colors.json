@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Đen",
+    "hex_code": "#000000"
+  },
+  {
+    "id": 2,
+    "name": "Trắng",
+    "hex_code": "#FFFFFF"
+  },
+  {
+    "id": 3,
+    "name": "Đỏ",
+    "hex_code": "#FF0000"
+  },
+  {
+    "id": 4,
+    "name": "Xanh dương",
+    "hex_code": "#0000FF"
+  }
+]

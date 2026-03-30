@@ -1,0 +1,28 @@
+[
+  {
+    "id": "vch-sale10-xxxx",
+    "ma_voucher": "SALE10",
+    "loai_giam_gia": "Phan_Tram",
+    "gia_tri_giam": 10,
+    "don_toi_thieu": 500000,
+    "giam_toi_da": 100000,
+    "so_luong": 100,
+    "da_dung": 12,
+    "ngay_bat_dau": "2026-03-01T00:00:00Z",
+    "ngay_ket_thuc": "2026-04-01T23:59:59Z",
+    "trang_thai": "Hoat_Dong"
+  },
+  {
+    "id": "vch-freeship-xxxx",
+    "ma_voucher": "FREESHIP",
+    "loai_giam_gia": "Tien_Mat",
+    "gia_tri_giam": 30000,
+    "don_toi_thieu": 200000,
+    "giam_toi_da": 30000,
+    "so_luong": 500,
+    "da_dung": 500,
+    "ngay_bat_dau": "2026-01-01T00:00:00Z",
+    "ngay_ket_thuc": "2026-01-31T23:59:59Z",
+    "trang_thai": "Het_Han"
+  }
+]
