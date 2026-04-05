@@ -1,0 +1,22 @@
+[
+  {
+    "id": "var-1234-abcd",
+    "product_id": "prod-auto-uid-01",
+    "size_id": 2,
+    "color_id": 1,
+    "sku": "NIKE-SHOE-40-BLK",
+    "price": 1250000,
+    "stock_quantity": 40,
+    "reserved_quantity": 0
+  },
+  {
+    "id": "var-1235-efgh",
+    "product_id": "prod-auto-uid-01",
+    "size_id": 3,
+    "color_id": 2,
+    "sku": "NIKE-SHOE-41-WHT",
+    "price": 1250000,
+    "stock_quantity": 15,
+    "reserved_quantity": 2
+  }
+]

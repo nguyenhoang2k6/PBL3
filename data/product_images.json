@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "product_id": "prod-auto-uid-01",
+    "image_url": "https://example.com/uploads/shoes-nike-black-front.jpg",
+    "is_primary": true,
+    "sort_order": 1
+  },
+  {
+    "id": 2,
+    "product_id": "prod-auto-uid-01",
+    "image_url": "https://example.com/uploads/shoes-nike-black-side.jpg",
+    "is_primary": false,
+    "sort_order": 2
+  }
+]

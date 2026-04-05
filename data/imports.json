@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "ma_phieu": "PN-20250325-001",
+    "ngay_nhap": "2025-03-25",
+    "supplier_id": 1,
+    "user_id": 1,
+    "tong_tien": 13500000,
+    "ghi_chu": "Nhập hàng thể thao quý 1",
+    "items": [
+      {
+        "product_id": 1,
+        "so_luong": 10,
+        "gia_nhap": 850000
+      },
+      {
+        "product_id": 4,
+        "so_luong": 20,
+        "gia_nhap": 250000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "ma_phieu": "PN-20250326-002",
+    "ngay_nhap": "2025-03-26",
+    "supplier_id": 2,
+    "user_id": 2,
+    "tong_tien": 20500000,
+    "ghi_chu": "Nhập đợt giày thể thao ASICS",
+    "items": [
+      {
+        "product_id": 5,
+        "so_luong": 10,
+        "gia_nhap": 1500000
+      },
+      {
+        "product_id": 11,
+        "so_luong": 5,
+        "gia_nhap": 1100000
+      }
+    ]
+  }
+]

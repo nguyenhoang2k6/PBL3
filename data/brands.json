@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Nike",
+    "logo_url": "https://example.com/logo/nike.png",
+    "description": "Just Do It"
+  },
+  {
+    "id": 2,
+    "name": "Adidas",
+    "logo_url": "https://example.com/logo/adidas.png",
+    "description": "Impossible is Nothing"
+  },
+  {
+    "id": 3,
+    "name": "Puma",
+    "logo_url": "https://example.com/logo/puma.png",
+    "description": "Forever Faster"
+  }
+]

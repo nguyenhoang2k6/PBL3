@@ -1,0 +1,18 @@
+[
+  {
+    "id": "addr-9876-001",
+    "customer_id": "cust-user-id-01",
+    "receiver_name": "Nguyễn Văn A",
+    "phone": "0987123456",
+    "address": "123 Đường Số 1, Phường 2, Quận 3, TP.HCM",
+    "is_default": true
+  },
+  {
+    "id": "addr-9876-002",
+    "customer_id": "cust-user-id-01",
+    "receiver_name": "Nguyễn Văn Khác",
+    "phone": "0912123456",
+    "address": "456 Đường ABC, Phường X, Quận Y, Hà Nội",
+    "is_default": false
+  }
+]

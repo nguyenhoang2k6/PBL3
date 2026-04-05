@@ -1,0 +1,21 @@
+[
+  {
+    "id": "cart-1111-2222",
+    "customer_id": "cust-user-id-01",
+    "status": "active",
+    "created_at": "2026-03-30T10:00:00Z",
+    "updated_at": "2026-03-30T10:15:00Z",
+    "items": [
+      {
+        "variant_id": "var-1234-abcd",
+        "quantity": 2,
+        "unit_price": 1250000
+      },
+      {
+        "variant_id": "var-1235-efgh",
+        "quantity": 1,
+        "unit_price": 1250000
+      }
+    ]
+  }
+]

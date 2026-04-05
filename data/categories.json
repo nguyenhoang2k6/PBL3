@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "ten_danh_muc": "Bóng đá",
+    "mo_ta": "Sản phẩm, dụng cụ bóng đá"
+  },
+  {
+    "id": 2,
+    "ten_danh_muc": "Bóng rổ",
+    "mo_ta": "Sản phẩm, dụng cụ bóng rổ"
+  },
+  {
+    "id": 3,
+    "ten_danh_muc": "Cầu lông",
+    "mo_ta": "Vợt và phụ kiện cầu lông"
+  },
+  {
+    "id": 4,
+    "ten_danh_muc": "Bóng chuyền",
+    "mo_ta": "Sản phẩm bóng chuyền"
+  },
+  {
+    "id": 5,
+    "ten_danh_muc": "Bóng bàn",
+    "mo_ta": "Bàn, vợt, bóng bàn"
+  }
+]

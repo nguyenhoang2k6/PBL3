@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "ma_hoa_don": "HD-20250320-001",
+    "order_id": 1,
+    "user_id": 1,
+    "ngay_xuat": "2025-03-20T10:30:00",
+    "tong_tien_truoc_thue": 770909,
+    "thue_vat": 77091,
+    "tong_thanh_toan": 848000,
+    "ma_so_thue": ""
+  },
+  {
+    "id": 2,
+    "ma_hoa_don": "HD-20250322-002",
+    "order_id": 2,
+    "user_id": 1,
+    "ngay_xuat": "2025-03-22T08:15:00",
+    "tong_tien_truoc_thue": 180909,
+    "thue_vat": 18091,
+    "tong_thanh_toan": 199000,
+    "ma_so_thue": "0101234567"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "ten_nha_cung_cap": "Công ty TNHH Thể thao Toàn Cầu",
+    "sdt": "0987654321",
+    "email": "contact@toancau_sports.vn",
+    "dia_chi": "123 Đường Điện Biên Phủ, TP Hà Nội"
+  },
+  {
+    "id": 2,
+    "ten_nha_cung_cap": "Đại lý Thể thao Hưng Yên",
+    "sdt": "0912345678",
+    "email": "daily.hungyen.partner@gmail.com",
+    "dia_chi": "Khu công nghiệp Yên Mỹ, Tỉnh Hưng Yên"
+  }
+]
